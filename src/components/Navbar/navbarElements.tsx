@@ -1,9 +1,10 @@
 import styled from 'styled-components'
+import theme from '../../theme'
 import {Link as LinkR} from 'react-router-dom';
 import {Link as LinkS} from 'react-scroll';
 
 export const Nav = styled.nav`
-  background: #000;
+  background: ${theme.primaryDark};
   height: 80px;
   /* margin-top: -80px; */
   display: flex;
@@ -30,7 +31,7 @@ export const NavbarContainer = styled.div`
 `
 
 export const NavLogo = styled(LinkR)`
-  color: #fff;
+  color: ${theme.primaryLight};
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.5rem;
@@ -51,7 +52,7 @@ export const Drawer = styled.div`
     transform: translate(-100%,60%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: #FFF;
+    color: ${theme.primaryLight};
   }
 `
 export const NavMenu = styled.ul`
@@ -70,7 +71,7 @@ export const NavItem = styled.li`
   height: 80px;
 `
 export const NavLink = styled(LinkS)`
-  color:#fff;
+  color:${theme.primaryLight};
   display:flex;
   align-items: center;
   text-decoration: none;
@@ -79,7 +80,7 @@ export const NavLink = styled(LinkS)`
   cursor: pointer;
 
   &.active{
-    border-bottom: 3px solid #01bf71;
+    border-bottom: 3px solid ${theme.primaryHover};
   }
 `
 
@@ -94,10 +95,10 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled(LinkR)`
   border-radius: 50px;
-  background: #01bf71;
+  background: ${theme.primaryHover};
   white-space: nowrap;
   padding: 10px 22px;
-  color: #010606;
+  color: ${theme.textHover};
   outline: none;
   border: none;
   cursor: pointer;
@@ -106,7 +107,7 @@ export const NavBtnLink = styled(LinkR)`
 
   &:hover{
     transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
+    background: ${theme.primaryLight};
+    color: ${theme.textHover};
   }
 `

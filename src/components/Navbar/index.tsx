@@ -1,13 +1,27 @@
-import {Nav, NavbarContainer, NavLogo, Drawer, NavMenu, NavItem, NavLink, NavBtn, NavBtnLink} from './navbarElements'
+import React from 'react';
 import { FaBars } from 'react-icons/fa';
+import { 
+  Nav, 
+  NavbarContainer, 
+  NavLogo, 
+  Drawer, 
+  NavMenu, 
+  NavItem, 
+  NavLink, 
+  NavBtn, 
+  NavBtnLink 
+} from './navbarElements'
 
-const Navbar = () => {
+interface NavbarProps{
+  toggle: any;
+}
+const Navbar: React.FC<NavbarProps> = ({toggle}) => {
     return (
         <>
           <Nav>
             <NavbarContainer>
               <NavLogo to='/'>vBank</NavLogo>
-              <Drawer>
+              <Drawer onClick={toggle}>
                 <FaBars/>
               </Drawer>
               <NavMenu>
